@@ -59,7 +59,8 @@ const SOverlay = styled.div`
 `;
 
 const SContainer = styled.div`
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -126,7 +127,7 @@ type Props = {
   href: string;
 };
 
-const SSocialIconLink = styled.a.attrs<Props>(props => ({
+const SSocialIconLink = styled.a.attrs<Props>((props) => ({
   href: props.href,
 }))<Props>`
   ${IconLinkStyled}
